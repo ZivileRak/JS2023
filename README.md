@@ -8,3 +8,5 @@ npm start
 To create a production build, use npm run build.
 React projektas buvo sėkmingai sukompiliuotas ir paruoštas naudojimui. Projektas buvo sudėtas į "build" katalogą, kuris yra optimalizuotas ir parengtas diegimui į realią interneto svetainę.
 
+Dabar įdiegiu priklausomybes: Express.js, MySQL, "body-parser" ir "cors"
+npm install express mysql body-parser cors
