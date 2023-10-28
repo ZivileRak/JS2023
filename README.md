@@ -10,3 +10,6 @@ React projektas buvo sėkmingai sukompiliuotas ir paruoštas naudojimui. Projekt
 
 Dabar įdiegiu priklausomybes: Express.js, MySQL, "body-parser" ir "cors"
 npm install express mysql body-parser cors
+
+keičiu app.js failą
+App.js faile nustatyta maršrutizaciją SPA (Vieno puslapio programos) svetainėje naudojant "react-router". Turime tris maršrutus: pagrindinį puslapį ("exact path="/" component={ProductList}"), pirkinių krepšelio puslapį ("/shopping-cart" component={ShoppingCart}") ir vartotojo paskyros puslapį ("/user-account" component={UserAccount}").
