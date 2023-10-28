@@ -13,3 +13,6 @@ npm install express mysql body-parser cors
 
 keičiu app.js failą
 App.js faile nustatyta maršrutizaciją SPA (Vieno puslapio programos) svetainėje naudojant "react-router". Turime tris maršrutus: pagrindinį puslapį ("exact path="/" component={ProductList}"), pirkinių krepšelio puslapį ("/shopping-cart" component={ShoppingCart}") ir vartotojo paskyros puslapį ("/user-account" component={UserAccount}").
+
+įdiegiu "react-router-dom" biblioteką, kuri yra būtina, jei noriu naudoti maršrutizaciją su "react-router"
+npm install react-router-dom
