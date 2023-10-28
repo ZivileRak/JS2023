@@ -16,3 +16,7 @@ App.js faile nustatyta maršrutizaciją SPA svetainėje naudojant "react-router"
 
 įdiegiu "react-router-dom" biblioteką, kuri yra būtina, jei noriu naudoti maršrutizaciją su "react-router"
 npm install react-router-dom
+
+React App atsidaro puslapis su Namai-Krepšelis-Vartotojo paskyra
+
+IKI ČIA VEIKIA PUIKIAI :)
