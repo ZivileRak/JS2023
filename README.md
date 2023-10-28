@@ -4,3 +4,7 @@ Sukuriu naują React projektą pavadinimu "my-new-web-store" ir paleidziu jį vi
 npx create-react-app my-new-web-store
 cd my-new-web-store
 npm start
+
+To create a production build, use npm run build.
+React projektas buvo sėkmingai sukompiliuotas ir paruoštas naudojimui. Projektas buvo sudėtas į "build" katalogą, kuris yra optimalizuotas ir parengtas diegimui į realią interneto svetainę.
+
