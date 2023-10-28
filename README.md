@@ -19,4 +19,4 @@ npm install react-router-dom
 
 React App atsidaro puslapis su Namai-Krepšelis-Vartotojo paskyra
 
-IKI ČIA VEIKIA PUIKIAI :)
+IKI ČIA VEIKIA :)
