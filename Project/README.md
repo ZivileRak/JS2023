@@ -22,10 +22,12 @@ React App atsidaro puslapis su Namai-Krepšelis-Vartotojo paskyra
 IKI ČIA VEIKIA :)
 
 --- ------
-a) Sukurtas backend naudojant: npm init / express / sql.
-b) Prideta duomenu baze MY SQL (lentele Product). 
-c) Sujungta su Front end ir siuo metu tik atvaizduoja SQL duomenu bazes irasus Front End puslapyje. 
-d) toliau dirbu ties vartotoj paskyros sukurimo ( tikiuos pavyks :)  
+I) Sukurtas backend naudojant: npm init / express / sql.
+II) Prideta duomenu baze MY SQL (lentele Product). 
+III) Sujungta su Front end ir siuo metu tik atvaizduoja SQL duomenu bazes irasus Front End puslapyje. 
+IV) Taip pat neveike routes( arba as kazka sugadinau) - tai pradejau kurti naujus route ir puslapius.(Tad as pasalinau js failus  pridejau jsx) - bet iki galo nesudejau.  
+V) sukuriau folder su pictures - kuriuos planuoju panaudoti prie product ir home.  
+VI) toliau dirbu ties vartotoj paskyros sukurimo ( tikiuos pavyks :)  
 
 
 PLANAS:
