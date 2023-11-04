@@ -3,21 +3,20 @@ import './styles.css';
 
 
 
-
 const Product= () => {
 return (
     <div>
       <header className="bg-dark text-white text-center py-3">
         <h1>SPA equipment webshop </h1>
         <h3>Enjoy SPA at home </h3>
-        <nav className="mt-3">
+        /*<nav className="mt-3">
           <ul className="nav">
-            <li className="nav-item"><a className="nav-link" href="#">Namai</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Spa Vonios</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Krepšelis</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Vartotojo Paskyra</a></li>
+          <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">SPA equitment</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Shopping cart</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Login</a></li>
           </ul>
-        </nav>
+        </nav>*/
       </header>
 
       <main className="container mt-4">

@@ -9,10 +9,10 @@ return (
         <h1>Maža internetinė parduotuvė</h1>
         <nav className="mt-3">
           <ul className="nav">
-            <li className="nav-item"><a className="nav-link" href="#">Namai</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Spa Vonios</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Krepšelis</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Vartotojo Paskyra</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">SPA equitment</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Shopping cart</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Login</a></li>
           </ul>
         </nav>
       </header>

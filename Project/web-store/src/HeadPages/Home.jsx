@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 /*import HomeContent from '../Components/HomeContent/HomeContent'*/
 import './styles.css';
 
+
 const Home= () => {
     return(
         

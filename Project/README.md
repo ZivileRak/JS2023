@@ -25,7 +25,7 @@ IKI ČIA VEIKIA :)
 I) Sukurtas backend naudojant: npm init / express / sql.
 II) Prideta duomenu baze MY SQL (lentele Product). 
 III) Sujungta su Front end ir siuo metu tik atvaizduoja SQL duomenu bazes irasus Front End puslapyje. 
-IV) Taip pat neveike routes( arba as kazka sugadinau) - tai pradejau kurti naujus route ir puslapius.(Tad as pasalinau js failus  pridejau jsx) - bet iki galo nesudejau.  
+IV) Taip pat neveike routes( arba as kazka sugadinau) - tai pradejau kurti naujus route ir puslapius.(Tad as pasalinau js failus  pridejau jsx) - bet iki galo nesudejau. Bet manau tai susije su install routes nes po instaliacijos ir koregavimo dabar sudubliavau :(  
 V) sukuriau folder su pictures - kuriuos planuoju panaudoti prie product ir home.  
 VI) toliau dirbu ties vartotoj paskyros sukurimo ( tikiuos pavyks :)  
 
