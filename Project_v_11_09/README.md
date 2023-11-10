@@ -39,6 +39,18 @@ WEBSITE PALEIDIMAS: npm start
 pirma karta atsidarius project'a, reikia back paleisti: nmp start
 tada paleisti frontend: npm start
 
+IG 10/11/2023
+Papildau projekto struktūrą Frontend dalyje: 
+/src
+    /components
+        ProductList.js
+
+Kuriu sąsają tarp backendo kodo ir frontendo. Norint pasirinkti prekes į krepšelį, frontende turi susikurti užklausą į backendo endpoint'ą.
+ProductList.js kodas rodo produktų sąrašą su mygtukais "Pridėti į krepšelį", paspaudus mygtuką, jis siunčia užklausą į backend endpointą /api/add-to-cart perduodant produkto ID.
+
+Papildau backend kodą tam, kad priimti productID iš frontend, pridėti produktą į krepšelį ir grąžinti atnaujintą krepšelį. Taigi pridedu endpointą į backend kodą.
+
+
 *******
 PLANAS:
 1. Kurkite duomenų bazę: Turėsite sukurti duomenų bazę, kurioje saugosite prekių informaciją, vartotojų paskyras, užsakymus ir kt. Galite naudoti serverinį duomenų bazių valdymo sistemą, tokią kaip MySQL.

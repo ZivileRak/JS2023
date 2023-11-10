@@ -1,11 +1,9 @@
 const express = require('express')
+const app = express();
+const port = 5000;
 const mysql = require('mysql')
 //const bcrypt = require("bcrypt")
-
 const cors = require('cors')
-
-
-const app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -16,14 +14,13 @@ const db = mysql.createConnection({
     password:'',
     database: 'web_store'
 })
-app.get('/product',(req,res)=> {
+app.get('/Product',(req,res)=> {
     const sql= "SELECT * FROM product";
     db.query(sql,(error,data)=>{
         if(error) return res.json(error);
         return res.json(data);
     })
 })
-
 
 /*const salt = bcrypt.genSaltSync(10);
 const hash = bcrypt.hashSync(req.body.Password, salt);*/
@@ -96,7 +93,44 @@ app.get("/",(req, res) =>{
     return res.json("Backend test - test ");  
 })*/
 
+// endpointas, kuris leistų vartotojui pridėti prekę į krepšelį
+app.post('/addToCart', (req, res) => {
+    const userId = req.body.userId;
+    const productId = req.body.productId;
+    const quantity = req.body.quantity;
 
-app.listen(5000,() => {
-    console.log("Connected to 5000.")
+    const sqlAddToCart = "INSERT INTO cart (user_id, product_id, quantity) VALUES (?, ?, ?)";
+    const values = [userId, productId, quantity];
+
+    db.query(sqlAddToCart, values, (err, result) => {
+        if (err) return res.json(err);
+        return res.json({ message: "Product added to the cart" });
+    });
+});
+
+
+// "backend" pusėje pridėdu API, siekiant atlikti užklausą į duomenų bazę ir nusiųsti rezultatus į "frontend" pusę
+// Endpoint'as, kuris gauna visus produktus iš duomenų bazės
+app.get('/products', (req, res) => {
+    const sql = "SELECT * FROM product";
+    db.query(sql, (error, data) => {
+        if (error) return res.status(500).json({ error: "Internal Server Error" });
+        return res.status(200).json(data);
+    });
+});
+
+// Endpoint'as, kuris įrašo naują produktą į duomenų bazę
+app.post('/products', (req, res) => {
+    const { name, image, price } = req.body;
+    const sql = "INSERT INTO product (name, image, price) VALUES (?, ?, ?)";
+    const values = [name, image, price];
+    db.query(sql, values, (error, result) => {
+        if (error) return res.status(500).json({ error: "Internal Server Error" });
+        return res.status(201).json({ message: "Product added successfully" });
+    });
+});
+
+app.listen(port,() => {
+    console.log("Server is running on http://localhost:5000")
 })
+

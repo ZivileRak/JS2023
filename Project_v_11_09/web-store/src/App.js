@@ -1,99 +1,62 @@
-import React, {useEffect, useState} from 'react';
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Outlet,
-  Link,
-
-} from "react-router-dom";
-
+import React from 'react';
+import { createBrowserRouter, RouterProvider, Route, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./index.css";
-
+import './index.css';
 import './headpages/styles.css';
+import Home from './headpages/Home';
+import Register from './headpages/Register';
+import Product from './headpages/Product';
+import ShopCart from './headpages/ShopCart';
+import Login from './headpages/Login';
+import Navbar from './Components/navbar/Navbar';
+import Cart from '/web-store/src'
+import ProductList from '/web-store/src'
 
 
-import Home from "./headpages/Home";
-import Register from "./headpages/Register";
-import Product from "./headpages/Product";
-import ShopCart from "./headpages/ShopCart";
-import Login from "./headpages/Login";
-import Navbar from "./Components/navbar/Navbar";
-
-
-
-
-const Layout= ()=> {
-  return(
+const Layout = () => {
+  return (
     <>
-      <Navbar/>
-      <Outlet/>
-      
+      <Navbar />
+      <Outlet />
     </>
   );
 };
 
-
 const router = createBrowserRouter([
   {
-    path: "/",
-    element:<Layout/>,
-    children:[
+    path: '/',
+    element: <Layout />,
+    children: [
       {
-        path:"/",
-        element:<Home/>
+        path: '/',
+        element: <Home />,
       },
       {
-        path:"/product",
-        element:<Product/>
+        path: '/product',
+        element: <ProductList />,
       },
       {
-        path:"/shopcart",
-        element:<ShopCart/>
+        path: '/shopcart',
+        element: <Cart />,
       },
       {
-        path:"/login",
-        element:<Login/>
+        path: '/login',
+        element: <Login />,
       },
       {
-        path:"/register",
-        element:<Register/>
-      }
-
-    ]    
-  },
-
-  {
-    path: "/product",
-    element: <div>Product</div>,
-  },
-  {
-    path: "/shopcart",
-    element: <div>ShopCartt</div>,
-  },
-  {
-    path: "/login",
-    element: <div>Login</div>,
-  },
-  {
-    path: "/register",
-    element: <div>Register</div>,
+        path: '/register',
+        element: <Register />,
+      },
+    ],
   },
 ]);
 
 function App() {
   return (
-  <div>
-    <shopContextProvider>
-  
-    < RouterProvider router ={router}></RouterProvider>
-    </shopContextProvider>
-  </div>
+    <div>
+      <RouterProvider router={router}></RouterProvider>
+    </div>
   );
 }
-
-
 
 export default App;
