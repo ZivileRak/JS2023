@@ -1,11 +1,9 @@
 const express = require('express')
+const app = express();
+const port = 5000;
 const mysql = require('mysql')
 //const bcrypt = require("bcrypt")
-
 const cors = require('cors')
-
-
-const app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -16,14 +14,13 @@ const db = mysql.createConnection({
     password:'',
     database: 'web_store'
 })
-app.get('/product',(req,res)=> {
+app.get('/Product',(req,res)=> {
     const sql= "SELECT * FROM product";
     db.query(sql,(error,data)=>{
         if(error) return res.json(error);
         return res.json(data);
     })
 })
-
 
 /*const salt = bcrypt.genSaltSync(10);
 const hash = bcrypt.hashSync(req.body.Password, salt);*/
@@ -133,7 +130,7 @@ app.post('/products', (req, res) => {
     });
 });
 
-app.listen(5000,() => {
-    console.log("Connected to 5000.")
+app.listen(port,() => {
+    console.log("Server is running on http://localhost:5000")
 })
 

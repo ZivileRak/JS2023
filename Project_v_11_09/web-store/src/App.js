@@ -9,8 +9,9 @@ import Product from './headpages/Product';
 import ShopCart from './headpages/ShopCart';
 import Login from './headpages/Login';
 import Navbar from './Components/navbar/Navbar';
-import ProductList from './ProductList';
-import Cart from './Cart';
+import Cart from '/web-store/src'
+import ProductList from '/web-store/src'
+
 
 const Layout = () => {
   return (
