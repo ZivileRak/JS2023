@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Cart.css'; // Importuojame stilių failą
 
 const Cart = ({ userId }) => {
     const [cart, setCart] = useState([]);
