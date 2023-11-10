@@ -1,0 +1,18 @@
+/* Stilius krepšelio antraštei */
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  /* Stilius krepšelio sąrašui */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Stilius krepšelio elementui */
+  li {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
