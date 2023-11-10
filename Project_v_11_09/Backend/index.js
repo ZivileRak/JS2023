@@ -1,19 +1,30 @@
 const express = require('express')
 const app = express();
 const port = 5000;
-const mysql = require('mysql')
+const mysql = require('mysql12')
 //const bcrypt = require("bcrypt")
 const cors = require('cors')
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+};
+
+const pool = mysql.createPool({
+    host: "localhost",
+    user: 'root',
+    password: '',
+    database: 'web_store',
+    connectionLimit: 10, 
+});
+
+const db = pool.promise();
 
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: 'root',
-    password:'',
-    database: 'web_store'
-})
 app.get('/Product',(req,res)=> {
     const sql= "SELECT * FROM product";
     db.query(sql,(error,data)=>{
@@ -113,7 +124,7 @@ app.post('/addToCart', (req, res) => {
 // Endpoint'as, kuris gauna visus produktus iš duomenų bazės
 app.get('/products', (req, res) => {
     const sql = "SELECT * FROM product";
-    db.query(sql, (error, data) => {
+    db.execute(sql, (error, data) => {
         if (error) return res.status(500).json({ error: "Internal Server Error" });
         return res.status(200).json(data);
     });
