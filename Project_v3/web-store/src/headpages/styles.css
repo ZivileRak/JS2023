@@ -1,0 +1,123 @@
+/* Pavyzdinis stilių failas (styles.css) su vandens ir mėlynos spalvomis */
+
+/* Stilius antraštės (header) elementui */
+.bg-dark {
+    background-color: #007acc; /* Mėlyna spalva su šviesia vandens atspalviu */
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Stilius pagrindinio turinio konteineriui (container) */
+  .container {
+       margin-top: 2rem;
+        
+  }
+  
+  /* Stilius korteles (card) */
+  .card {
+    border: 1px solid #007acc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007acc; /* Mėlyna spalva asocijuota su voniomis spa */
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #333; /* Tamsiai pilka spalva teksto skaitymui */
+  }
+  
+  .btn {
+    background-color: #007acc; /* Mėlyna spalva su šviesia vandens atspalviu */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Tamsesnė mėlyna spalva užspėjimui */
+  }
+  .homecontent{
+    height: 100vh;
+    background: rgb(135, 148, 222);
+    display: flex;
+}
+.authorization{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:center;
+  height: 10vh;
+  font-size: 10px;
+  gap: 10px;
+
+
+  form{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    gap: 10px;
+  }
+
+  input_text{
+    
+      padding: 20px;
+      border: none;
+      border-bottom:1px solid gray
+    }
+
+  }
+
+  .span
+  {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    height: 30vh;
+    font-size: 15px;
+  }
+
+  .error{
+    color: crimson;
+    font-size: 15px;
+    text-align: center;
+  }
+  .navbar{
+    display: flex;
+    justify-content:space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    span: cursor 
+}
+
+
+
+.links{
+    color: rgb(81, 30, 210);
+    gap:10px;
+}
+
+.foto{
+  height: 150.px;
+  width: 150 px;
+  object-fit: cover;
+  gap: 20
+  bacground-colour white;
+
+
+}
