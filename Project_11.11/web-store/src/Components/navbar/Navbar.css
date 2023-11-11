@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    justify-content:space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    span: cursor 
+}
+
+
+
+.links{
+    color: rgb(72, 30, 210);
+    gap:10px;
+}
