@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express();
 const port = 5000;
-const mysql = require('mysql12')
+const util = require('util');
+const mysql = require('mysql');
 //const bcrypt = require("bcrypt")
-const cors = require('cors')
+const cors = require('cors');
 
 const corsOptions = {
     origin: 'http://localhost:3000',
@@ -17,21 +18,37 @@ const pool = mysql.createPool({
     user: 'root',
     password: '',
     database: 'web_store',
-    connectionLimit: 10, 
+    connectionLimit: 10,
 });
 
-const db = pool.promise();
+const db = {
+    query: util.promisify(pool.query).bind(pool),
+};
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/Product',(req,res)=> {
-    const sql= "SELECT * FROM product";
-    db.query(sql,(error,data)=>{
-        if(error) return res.json(error);
-        return res.json(data);
-    })
-})
+app.get('/products', async (req, res) => {
+    const sql = "SELECT * FROM product";
+    try {
+        const data = await db.query(sql);
+        res.status(200).json(data);
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+app.post('/products', async (req, res) => {
+    const { name, image, price } = req.body;
+    const sql = "INSERT INTO product (name, image, price) VALUES (?, ?, ?)";
+    const values = [name, image, price];
+    try {
+        await db.query(sql, values);
+        res.status(201).json({ message: "Product added successfully" });
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
 
 /*const salt = bcrypt.genSaltSync(10);
 const hash = bcrypt.hashSync(req.body.Password, salt);*/
