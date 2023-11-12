@@ -29,8 +29,7 @@ app.post('/register',(req,res) => {
     const registerEmail =req.body.registerEmail;
     const registerPassword =req.body.registerPassword
 
-   /* const salt = bcrypt.genSaltSync(10);
-    const hash = bcrypt.hashSync(req.body.Password, salt);*/
+
     
     console.log(registerName, registerSurname, registerEmail, registerPassword);  // registerPassword
     const salt = bcrypt.genSaltSync(10); 
@@ -46,8 +45,7 @@ app.post('/register',(req,res) => {
          })
         })
 
-        /* if(error) return res.json(error);
-         return res.json(data);*/
+
 
 // Login fukcija
 
@@ -92,4 +90,3 @@ app.listen(5000,() => {
     console.log("Connected to 5000.")
 })
 
-/* testuojam ar uzdarius ir atidarius matysim ta pati.*/
