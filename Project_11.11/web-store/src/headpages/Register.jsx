@@ -16,6 +16,10 @@ function Register() {
       setError("All fields are required");
       return;
     }
+    if (password.length < 8 ) { // papildyta 11.12
+      window.alert("Password must be at least 8 character");
+      return;
+        }
 
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');

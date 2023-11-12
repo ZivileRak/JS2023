@@ -31,8 +31,10 @@ app.post('/register',(req,res) => {
     const hash = bcrypt.hashSync(req.body.Password, salt);*/
     
     console.log(registerName, registerSurname, registerEmail, registerPassword);  // registerPassword
+    const salt = bcrypt.genSaltSync(10); 
+    const hash = bcrypt.hashSync(req.body.registerPassword, salt);
 
-    const sqlRegister = "INSERT INTO customer(name, surname, email, password) VALUES (?,?,?,?)" 
+    const sqlRegister = "INSERT INTO customer(name, surname, email, hash) VALUES (?,?,?,?)" 
     const Values = [registerName, registerSurname, registerEmail, registerPassword]
 
     db.query(sqlRegister, Values, (err,res)=> {
