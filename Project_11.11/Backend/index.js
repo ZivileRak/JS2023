@@ -1,10 +1,6 @@
 const express = require('express')
 const mysql = require('mysql')
-//const pass_manag = require("./password_manager");
-//const bcrypt = require("bcrypt")
-
 const cors = require('cors')
-
 
 const app = express();
 
@@ -24,8 +20,6 @@ app.get('/product',(req,res)=> {
         return res.json(data);
     })
 })
-
-
 
 app.post('/register',(req,res) => {
     const registerName = req.body.registerName;
@@ -76,26 +70,19 @@ app.post("/customer", (req, res) => {
 })
 
 
-/*
-            db_manage.getUser(uname, (hashpassword) => {
-                if (hashpassword === null) {
-                    res.send({ status: 400, "error": "User does not exist" })
-                    return;
-                }
-                pass_manag.comparePassword(password, hashpassword, (error, passmatch) => {
-                    if (error) {
-                        res.send({ status: 500, "error": error })
-                    }
-                    else if (passmatch) {
-                        res.send({ status: 200, "error": null })
-                    }
-                    else {
-                        res.send({ status: 400, "error": "Password doesn't match" })
-                    }
-                })
-            })
-        })
-*/
+// Pridėti prekę į krepšelį
+app.post('/addToCart', (req, res) => {
+    const { productId, productName, productDescription, price } = req.body;
+    const cartItem = { productId, productName, productDescription, price };
+    res.json({ message: 'Prekė pridėta į krepšelį', cartItem });
+  });
+  
+  // Gauti krepšelio turinį
+  app.get('/getCart', (req, res) => {
+    const cartItems = []; // Čia turėtumėte turėti tikrą krepšelio turinį
+    res.json(cartItems);
+  });
+  
 
 app.listen(5000,() => {
     console.log("Connected to 5000.")
