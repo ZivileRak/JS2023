@@ -87,3 +87,5 @@ app.post('/addToCart', (req, res) => {
 app.listen(5000,() => {
     console.log("Connected to 5000.")
 })
+
+/* testuojam ar uzdarius ir atidarius matysim ta pati.*/
