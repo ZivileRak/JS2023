@@ -1,0 +1,184 @@
+/* Use a specific class to encapsulate styles for the shopping cart */
+.shopping-cart {
+    width: 70%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+    overflow: hidden;
+    margin: auto; /* Pridėta, kad centravimas veiktų */
+    margin-top: 5%; /* Pridėta, kad būtų šiek tiek tarpas viršuje */
+}
+
+.shopping-cart .Header {
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart .Heading {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #2F3841;
+}
+
+.shopping-cart .Action {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+}
+
+.shopping-cart .Cart-Items {
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.shopping-cart .image-box {
+    width: 15%; 
+    text-align: left;
+}
+
+.shopping-cart .about {
+    flex-grow: 1;
+}
+
+.shopping-cart .title {
+    padding-top: 5px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #202020;
+    text-align: right; 
+}
+
+.shopping-cart .counter {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-cart .btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    color: #202020;
+    cursor: pointer;
+}
+
+.shopping-cart .count {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    color: #202020;
+}
+
+.shopping-cart .prices {
+    height: 100%;
+    text-align: right;
+}
+
+.shopping-cart .amount {
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #202020;
+}
+
+.shopping-cart .save,
+.shopping-cart .remove {
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.shopping-cart .save {
+    color: #1687d9;
+}
+
+.shopping-cart .remove {
+    color: #E44C4C;
+}
+
+.shopping-cart hr {
+    width: 66%;
+    float: right;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+.shopping-cart .checkout {
+    float: right;
+    margin-right: 5%;
+    width: 28%;
+    margin-top: 20px;
+}
+
+.shopping-cart .total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.shopping-cart .Subtotal {
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #202020;
+}
+
+.shopping-cart .items {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    color: #909090;
+    line-height: 1.2;
+}
+
+.shopping-cart .total-amount {
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    color: #202020;
+}
+
+.shopping-cart .button {
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #202020;
+}
